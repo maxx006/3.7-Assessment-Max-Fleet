@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="boat.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+<div class="row">
+		<div class="column">
+			<div class="card" data-price="249" data-value="Brunch Charter">
+				<h3>Brunch Charter</h3><img alt="executive suite" src="3.7 images/brunch_charter.jpg">
+				<p>$249 per night</p><button class="roomButton" type="button">Book Room</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card" data-price="289" data-value="Afternoon Delight">
+				<h3>Afternoon delight</h3><img alt="family suite" src="3.7 images/day time.jpg">
+				<p>$289 per night</p><button class="roomButton" type="button">Book Room</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card" data-price="219" data-value="Sunset Sailing">
+				<h3>Sunset sailing</h3><img alt="studio room" src="3.7 images/night.jpg">
+				<p>$219 per night</p><button class="roomButton" type="button">Book Room</button>
+			</div>
+		</div>
+	</div><!-- this closes off my room cards-->
+	
+    <form>
+	<p>What extras would you like to use?</p>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox1" name="checkbox1" value="1" data-price="50"> Full body massage<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox3" name="checkbox3" value="3" data-price="0"> Cot<br>
+	</form>
+	
+	<label>First name: <input autocomplete="given-name" id="firstNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="John" required="" title="Please enter in your first name" type="text"></label>
+	<div class="errorMessages" id="errorMessage1"></div>
+	
+	<label>Last name: <input autocomplete="family-name" id="lastNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="Smith" required="" title="Please enter in your last name" type="text"></label>
+	<div class="errorMessages" id="errorMessage2"></div>
+	
+	<label>Email: <input autocomplete="family-name" id="EmailInput" pattern="[A-Za-z\-']{2,10}" placeholder="johnsmith@gmail.com" required="" title="Please enter in your last name" type="text"></label>
+	<div class="errorMessages" id="errorMessage3"></div>
+	
+	<label>Phone Number: <input autocomplete="given-name" id="phoneNumberInput" pattern="[A-Za-z\-']{2,10}" placeholder="John" required="" title="Please enter in your first name" type="text"></label>
+	<div class="errorMessages" id="errorMessage4"></div>
+	
+	<label>Drivers Licence: <input autocomplete="family-name" id="driversLicenceInput" pattern="[A-Za-z\-']{2,10}" placeholder="Smith" required="" title="Please enter in your last name" type="text"></label>
+	<div class="errorMessages" id="errorMessage5"></div>
+	
+	<label>Age: <input autocomplete="family-name" id="ageInput" pattern="[A-Za-z\-']{2,10}" placeholder="johnsmith@gmail.com" required="" title="Please enter in your last name" type="text"></label>
+	<div class="errorMessages" id="errorMessage6"></div>
+	
+	
+<script src="ship.js"></script>
+<script src="airtable.browser.js"></script>
+</body>
+</html>
