@@ -6,12 +6,13 @@ function charterBooking(){
 	alert("charter booking function starting")
 	var checkInDate = document.getElementById("checkInDate").value;
 	alert(checkInDate);
-	var numberOfNights = document.getElementById("numberOfNights").value;
-	alert(numberOfNights);
-	var pricePerNight = this.dataset.price;
+	var guestAmount = document.getElementById("guestAmount").value;
+	alert(cruiseDuration);
+	var cruisePurpose =document.getElementsByClassName("cruisePurpose")
+	var cruiseDuration = this.dataset.price;
 	var cruiseType = this.dataset.price;
-	alert(roomType + pricePerNight);
-	totalCost += Number(numberOfNights * pricePerNight);
+	alert(cruiseType + cruiseDuration);
+	totalCost += Number(cruiseType + cruiseDuration);
 	extraOptions = [];
 	var myForm = document.getElementsByClassName("extrasCheckbox")
 	for (i = 0; i < myForm.length; i++) {
@@ -24,10 +25,10 @@ function charterBooking(){
 			}
 		}
 	}
-	totalCost = Number(numberOfNights * pricePerNight + extrasCost);
+	totalCost = Number(cruiseType + cruiseDuration + extrasCost);
 	alert("total cost" + totalCost);
 	document.getElementById("outputDate").scrollIntoView();
-	outPutSummary(checkInDate, numberOfNights, pricePerNight, roomType, extrasCost, totalCost);
+	outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, cruisePurpose,extraOptions);
 }
 
 
@@ -58,14 +59,16 @@ for (var i = 0; i < tiles.length; i++) {
 	tiles[i].addEventListener('click', charterBooking);
 }
 
-function outPutSummary(checkInDate, numberOfNights, pricePerNight, roomType, extrasCost, totalCost) {
+function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, cruisePurpose, extraOptions) {
 	document.getElementById("outputDate").innerHTML = checkInDate;
-	document.getElementById("nightOutput").innerHTML = numberOfNights;
+	document.getElementById("durationOutput").innerHTML = cruiseDuration;
 	document.getElementById("cruiseOutput").innerHTML = cruiseType;
-	document.getElementById("priceOutput").innerHTML = pricePerNight;
+	document.getElementById("purposeOutput").innerHTML = cruisePurpose;
+	document.getElementById("guestOutput").innerHTML = guestAmount;
 	document.getElementById("extrasOutput").innerHTML = extrasCost;
+	document.getElementById("optionsOutput").innerHTML = extraOptions;
 	document.getElementById("totalOutput").innerHTML = totalCost;
-	document.getElementById("totalOutput").innerHTML = totalCost;
+	
 }
 
 function checkDetails(){}

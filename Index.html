@@ -8,24 +8,24 @@
 <body>
 	
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="#home">Booking</a>
 </div>
 <div class="main_content">	
 <div class="row">
 		<div class="column">
-			<div class="card" data-price="249" data-value="Brunch Charter">
+			<div class="card" data-price="680" data-value="Brunch Charter">
 				<h3>Brunch Charter</h3><img alt="executive suite" src="3.7 images/brunch_charter.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
 		</div>
 		<div class="column">
-			<div class="card" data-price="289" data-value="Afternoon Delight">
+			<div class="card" data-price="680" data-value="Afternoon Delight">
 				<h3>Afternoon delight</h3><img alt="family suite" src="3.7 images/day time.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
 		</div>
 		<div class="column">
-			<div class="card" data-price="219" data-value="Sunset Sailing">
+			<div class="card" data-price="680" data-value="Sunset Sailing">
 				<h3>Sunset sailing</h3><img alt="studio room" src="3.7 images/night.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
@@ -39,7 +39,7 @@
 	<br>
 	
     <label for="cars">Plese select an option for how many hours you want the cruise to go for:</label>
-  <select name="cars" id="bookingHours">
+  <select name="cars" id="cruiseDuration">
     <option value="volvo">3 Hours</option>
     <option value="saab">4 Hours</option>
     <option value="opel">5 Hours</option>
@@ -63,7 +63,7 @@
 	
 	<label>How many Guests Will be attending this event? (maximum 50)</label>
 	<form>
-		<input id="numberOfNights" max="50" min="1" type="number">
+		<input id="guestAmount" max="50" min="1" type="number">
 	</form>
 	
 	
@@ -111,7 +111,7 @@
 		<tbody>
 			<tr>
 				<td>Cruise duration</td>
-				<td id="nightOutput"></td>
+				<td id="durationOutput"></td>
 			</tr>
 			<tr>
 				<td>Cruise choice</td>
@@ -119,19 +119,19 @@
 			</tr>
 			<tr>
 				<td>Cruise purpose</td>
-				<td id="roomOutput"></td>
+				<td id="purposeOutput"></td>
 			</tr>
 			<tr>
 				<td>Amount of guests</td>
 				<td id="guestOutput"></td>
 			</tr>
 			<tr>
-				<td>Price for boat</td>
-				<td id="priceOutput"></td>
-			</tr>
-			<tr>
 				<td>Extras cost</td>
 				<td id="extrasOutput"></td>
+			</tr>
+			<tr>
+				<td>Extras options</td>
+				<td id="optionsOutput"></td>
 			</tr>
 			<tr>
 				<td>Total cost</td>
