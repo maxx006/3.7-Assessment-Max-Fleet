@@ -8,9 +8,9 @@ function charterBooking(){
 	alert(checkInDate);
 	var guestAmount = document.getElementById("guestAmount").value;
 	alert(cruiseDuration);
-	var cruisePurpose =document.getElementsByClassName("cruisePurpose")
-	var cruiseDuration = this.dataset.price;
-	var cruiseType = this.dataset.price;
+	var bookingPurpose =document.getElementById("bookingPurpose").value;
+	var cruiseDuration = document.getElementById("cruiseDuration").value;
+	var cruiseType = document.getElementById("cruiseType").value;
 	alert(cruiseType + cruiseDuration);
 	totalCost += Number(cruiseType + cruiseDuration);
 	extraOptions = [];
@@ -28,7 +28,7 @@ function charterBooking(){
 	totalCost = Number(cruiseType + cruiseDuration + extrasCost);
 	alert("total cost" + totalCost);
 	document.getElementById("outputDate").scrollIntoView();
-	outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, cruisePurpose,extraOptions);
+	outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose,extraOptions);
 }
 
 
@@ -59,11 +59,11 @@ for (var i = 0; i < tiles.length; i++) {
 	tiles[i].addEventListener('click', charterBooking);
 }
 
-function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, cruisePurpose, extraOptions) {
+function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions) {
 	document.getElementById("outputDate").innerHTML = checkInDate;
 	document.getElementById("durationOutput").innerHTML = cruiseDuration;
 	document.getElementById("cruiseOutput").innerHTML = cruiseType;
-	document.getElementById("purposeOutput").innerHTML = cruisePurpose;
+	document.getElementById("purposeOutput").innerHTML = bookingPurpose;
 	document.getElementById("guestOutput").innerHTML = guestAmount;
 	document.getElementById("extrasOutput").innerHTML = extrasCost;
 	document.getElementById("optionsOutput").innerHTML = extraOptions;
