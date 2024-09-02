@@ -11,21 +11,21 @@
   <a class="active" href="#home">Booking</a>
 </div>
 <div class="main_content">	
-<div class="row" id="cruiseType">
+<div class="row">
 		<div class="column">
-			<div class="card" data-price="680" value="Brunch Charter">
+			<div class="card" data-price="680" data-value="Brunch Charter">
 				<h3>Brunch Charter</h3><img alt="executive suite" src="3.7 images/brunch_charter.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
 		</div>
 		<div class="column">
-			<div class="card" data-price="680" value="Afternoon Delight">
+			<div class="card" data-price="680" data-value="Afternoon Delight">
 				<h3>Afternoon delight</h3><img alt="family suite" src="3.7 images/day time.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
 		</div>
 		<div class="column">
-			<div class="card" data-price="680" value="Sunset Sailing">
+			<div class="card" data-price="680" data-value="Sunset Sailing">
 				<h3>Sunset sailing</h3><img alt="studio room" src="3.7 images/night.jpg">
 				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
 			</div>
@@ -40,23 +40,23 @@
 	
     <label for="cars">Plese select an option for how many hours you want the cruise to go for:</label>
   <select name="cars" id="cruiseDuration">
-    <option value="3 Hours">3 Hours</option>
-    <option value="4 Hours">4 Hours</option>
-    <option value="5 Hours">5 Hours</option>
-    <option value="6 Hours">6 Hours</option>
+    <option data-price="2040" value="3">3 Hours</option>
+    <option data-price= "2720" value="4">4 Hours</option>
+    <option data-price= "3400" value="5">5 Hours</option>
+    <option data-price= "4080" value="6">6 Hours</option>
   </select>
 	<br>
 
 	
 	<label for="cars">Plese select an option for your purpose of the booking:</label>
   <select name="cars" id="bookingPurpose">
-    <option value="hensStagDo">Hens/ Stags Do</option>
-    <option value="corporateEvent">Corporate Event</option>
-    <option value="wedding">Wedding</option>
-    <option value="birthdayCelebration">Birthday Celebration</option>
+    <option value="Hens/Stags Do">Hens/ Stags Do</option>
+    <option value="Corporate Event">Corporate Event</option>
+    <option value="Wedding">Wedding</option>
+    <option value="Birthday Celebration">Birthday Celebration</option>
 	 <option value="graduation">Graduation</option>
-	  <option value="anniversary">Anniversary</option>
-	  <option value="christmasFunction">Christmas function</option>
+	  <option value="Anniversary">Anniversary</option>
+	  <option value="Christmas Function">Christmas function</option>
 	  <option value="other">Other</option>
   </select>
 	<br>
@@ -69,13 +69,13 @@
 	
 	<form>
 	<p>What extras would you like to use?</p>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox1" name="checkbox1" value="1" data-price="2000">Unlimited Drinks Package<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox2" name="checkbox2" value="2" data-price="350">Catered Snacks<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox3" name="checkbox3" value="3" data-price="350">DJ<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox4" name="checkbox4" value="4" data-price="50">BYO Food $50 (Service Charge)<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox5" name="checkbox5" value="5" data-price="60">Cake<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox6" name="checkbox6" value="6" data-price="650">Overnight Experience (Up to 6 people can sleep on board)<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox5" value="7" data-price="30">Fairy Lights<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox1" name="checkbox1" value="Unlimited Drinks Package" data-price="2000">Unlimited Drinks Package<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox2" name="checkbox2" value="Catered Snacks" data-price="350">Catered Snacks<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox3" name="checkbox3" value="DJ" data-price="350">DJ<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox4" name="checkbox4" value="BYO Food" data-price="50">BYO Food $50 (Service Charge)<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox5" name="checkbox5" value="Cake" data-price="60">Cake<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox6" name="checkbox6" value="Overnight Experience" data-price="650">Overnight Experience (Up to 6 people can sleep on board)<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox5" value="Fairy Lights" data-price="30">Fairy Lights<br>
 	</form>
 	
 	<label>First name: <input autocomplete="given-name" id="firstNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="John" required="" title="Please enter in your first name" type="text"></label>
@@ -105,10 +105,10 @@
 			<tbody>
 		    <tr>
 				<td>Check in date</td>
-				<th id="outputDate"></th>
+				<td id="outputDate"></td>
 			</tr>
 			<tr>
-				<td>Cruise duration</td>
+				<td>Hours on Cruise</td>
 				<td id="durationOutput"></td>
 			</tr>
 			<tr>
