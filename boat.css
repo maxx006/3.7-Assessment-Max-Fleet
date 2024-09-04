@@ -1,6 +1,50 @@
 @charset "UTF-8";
 /* CSS Document */
 
+footer {
+    background-color: #2C2B2F;
+    font-size: 26px;
+    padding: 7%;
+    color: white;
+    font-family: 'Barlow', sans-serif; /* Imported from Google Fonts */
+}
+
+/* Define styles for left-aligned anchor in the footer */
+footer .left_anchor {
+    margin-left: 3%; /* Align with main content */
+}
+
+/* Define styles for right-aligned elements in the footer */
+footer .right {
+    margin-right: 3%; /* Align with main content */
+}
+
+/* Define styles for image links in the footer */
+footer img {
+    float: right;
+    height: 50px;
+    padding: 10px 10px;
+}
+
+/* Define styles for links in the footer */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Define styles for paragraphs in the footer */
+footer p {
+    font-size: 18px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+/* Define styles for the footer height and alignment */
+footer {
+    height: 150px;
+    text-align: center;
+}
+
 
 /* Float four columns side by side */
 .column {
@@ -44,7 +88,7 @@
 
 
 body{
-    width:60%;
+    width:80%;
     margin:auto;
 }
 
