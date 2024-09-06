@@ -11,28 +11,7 @@
   <a class="active" href="#home">Booking</a>
 </div>
 <div class="main_content">	
-<div class="row">
-		<div class="column">
-			<div class="card" data-price="680" data-value="Brunch Charter">
-				<h3>Brunch Charter</h3><img alt="executive suite" src="3.7 images/brunch_charter.jpg">
-				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
-			</div>
-		</div>
-		<div class="column">
-			<div class="card" data-price="680" data-value="Afternoon Delight">
-				<h3>Afternoon delight</h3><img alt="family suite" src="3.7 images/day time.jpg">
-				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
-			</div>
-		</div>
-		<div class="column">
-			<div class="card" data-price="680" data-value="Sunset Sailing">
-				<h3>Sunset sailing</h3><img alt="studio room" src="3.7 images/night.jpg">
-				<p>$680 per Hour</p><button class="roomButton" type="button">Book Cruise</button>
-			</div>
-		</div>
-	</div><!-- this closes off my room cards-->
-	
-	
+
 	<label>Please enter the date you would like to book for this cruise:</label>
 	<form>
 		<input autocomplete="on" id="checkInDate" placeholder="00/00/2024" required="" title="Enter your check in time" type="date">
@@ -63,6 +42,16 @@
   </select>
 	<br>
 	
+	<label for="cars">Plese select an option for your Cruise sail time:</label>
+  <select name="cars" id="cruiseType">
+    <option value="11am Brunch Charter">11am Brunch Charter</option>
+    <option value="3pm Afternoon Delight">3pm Afternoon Delight</option>
+    <option value="7pm Sunset Sailing">7pm Sunset Sailing</option>
+	</select>
+	<br>
+	
+	
+	
 	<label>How many Guests Will be attending this event? (maximum 50)</label>
 	<form>
 		<input id="guestAmount" max="50" min="1" type="number">
@@ -77,7 +66,7 @@
 	<input type="checkbox" class="extrasCheckbox" id="checkbox4" name="checkbox4" value="BYO Food" data-price="50">BYO Food $50 (Service Charge)<br>
 	<input type="checkbox" class="extrasCheckbox" id="checkbox5" name="checkbox5" value="Cake" data-price="60">Cake<br>
 	<input type="checkbox" class="extrasCheckbox" id="checkbox6" name="checkbox6" value="Overnight Experience" data-price="650">Overnight Experience (Up to 6 people can sleep on board)<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox5" value="Fairy Lights" data-price="30">Fairy Lights<br>
+	<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox7" value="Fairy Lights" data-price="30">Fairy Lights<br>
 	</form>
 	
 	<label>First name: <input autocomplete="given-name" id="firstNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="John" required="" title="Please enter in your first name" type="text"></label>
@@ -86,7 +75,7 @@
 	<label>Last name: <input autocomplete="family-name" id="lastNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="Smith" required="" title="Please enter in your last name" type="text"></label>
 	<div class="errorMessages" id="errorMessage2"></div>
 	
-	<label>Email: <input autocomplete="family-name" id="EmailInput" pattern="[A-Za-z\-']{2,10}" placeholder="johnsmith@gmail.com" required="" title="Please enter in your Email" type="text"></label>
+	<label>Email: <input autocomplete="family-name" id="emailInput" pattern="[A-Za-z\-']{2,10}" placeholder="johnsmith@gmail.com" required="" title="Please enter in your Email" type="text"></label>
 	<div class="errorMessages" id="errorMessage3"></div>
 	
 	<label>Phone Number: <input autocomplete="given-name" id="phoneNumberInput" pattern="[A-Za-z\-']{2,10}" placeholder="0212032943" required="" title="Please enter in your Phone number" type="text"></label>
@@ -101,6 +90,31 @@
 	<label>Comments: <input autocomplete="family-name" id="commentsInput" pattern="[A-Za-z\-']{2,10}" placeholder="comments" type="text"></label>
 	<div class="errorMessages" id="errorMessage7"></div>
 	
+	
+	<div class="row">
+		<div class="column">
+			<div class="card" data-price="680" data-value="Brunch Charter">
+				<h3>Brunch Charter</h3><img alt="executive suite" src="3.7 images/brunch_charter.jpg">
+				<p>$680 per Hour</p>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card" data-price="680" data-value="Afternoon Delight">
+				<h3>Afternoon delight</h3><img alt="family suite" src="3.7 images/day time.jpg">
+				<p>$680 per Hour</p>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card" data-price="680" data-value="Sunset Sailing">
+				<h3>Sunset sailing</h3><img alt="studio room" src="3.7 images/night.jpg">
+				<p>$680 per Hour</p>
+			</div>
+		</div>
+	</div><!-- this closes off my room cards-->
+	
+	
+	
+
 	
 	<h2>reservation Summary</h2>
 	<table>
@@ -139,10 +153,10 @@
 			</tr>
 		</tbody>
 	</table>
-	
+<div id="outputcheckDetails"></div>
 <h3>do you agree to our terms and conditions?</h3>
 	<form>
-		<input id="termsAndConditions" type="checkbox"> <button type="button" class="submitButton" onclick="pushData()">Submit Reservation</button>
+		<input id="termsAndConditions" type="checkbox"> <button type="button" class="submitButton" onclick="checkDetails()">Submit Reservation</button>
 	</form>
 	
 	

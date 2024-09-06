@@ -7,9 +7,9 @@ function charterBooking(){
 	var guestAmount = document.getElementById("guestAmount").value;
 	var bookingPurpose =document.getElementById("bookingPurpose").value;
 	var cruiseDuration = document.getElementById("cruiseDuration").value;
-	var cruiseType =this.dataset.value;
-	var boatCost =this.dataset.price;
-	totalCost += Number(cruiseDuration*boatCost+extrasCost);
+	var cruiseType = document.getElementById("cruiseType").value;
+	var pricePerHour =this.dataset.price;
+	totalCost += Number(cruiseDuration*pricePerHour+extrasCost);
 	extraOptions = [];
 	var myForm = document.getElementsByClassName("extrasCheckbox")
 	
@@ -25,10 +25,9 @@ function charterBooking(){
 		document.getElementById ("cruiseDuration").validity.valueMissing) {
 			alert("Select duration of cruise");
 			document.getElementById("cruiseDuration").scrollIntoView();
-			//add in inline message here 
+			//add 
 			return;
 	}
-	
 	
 	
 	
@@ -42,28 +41,40 @@ function charterBooking(){
 			}
 		}
 	}
-	totalCost = Number(cruiseDuration*boatCost + extrasCost);
+	totalCost = Number(cruiseDuration*pricePerHour + extrasCost);
 	alert("total cost" + totalCost);
 	document.getElementById("outputDate").scrollIntoView();
-	outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose,extraOptions,boatCost);
+	outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose,extraOptions,pricePerHour);
 }
 
 
-function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions, boatCost) {
+function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions,pricePerHour) {
 	document.getElementById("outputDate").innerHTML = checkInDate;
 	document.getElementById("durationOutput").innerHTML = cruiseDuration;
 	document.getElementById("cruiseOutput").innerHTML = cruiseType;
 	document.getElementById("purposeOutput").innerHTML = bookingPurpose;
 	document.getElementById("guestOutput").innerHTML = guestAmount;
-	document.getElementById("extrasOutput").innerHTML = extrasCost;
+	document.getElementById("extrasOutput").innerHTML = "$" + extrasCost;
 	document.getElementById("optionsOutput").innerHTML = extraOptions;
-	document.getElementById("totalOutput").innerHTML = totalCost;
-	
+	document.getElementById("totalOutput").innerHTML = "$" + totalCost;
+    checkDetails(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions);	
 }
 
-function checkDetails(){}
+function checkDetails(checkInDate,cruiseDuration,cruiseType,bookingPurpose,guestAmount,extrasCost,extraOptions,totalCost){
+	alert("customer details function");
+	var firstname = firstNameInput.value;
+	var lastname = lastNameInput.value;
+	var cellphone = phoneNumberInput.value;
+	var email = emailInput.value;
+	var driversLicence = driversLicenceInput.value;
+	var age = ageInput.value;
+	var comments = commentsInput.value;
+	alert(firstname + lastname + cellphone);
+	outputcheckDetails.innerHTML = firstname + " " + lastname + " " + cellphone + " " + email + " " + driversLicence + " " + age + " " + comments;
+	pushData(firstname, lastname, cellphone, email, driversLicence, age, comments,checkInDate,cruiseDuration,cruiseType,bookingPurpose,guestAmount,extrasCost,extraOptions,totalCost);
+}
 
-function pushData(){
+function pushData(firstname, lastname, cellphone, email, driversLicence, age, comments,checkInDate,cruiseDuration,cruiseType,bookingPurpose,guestAmount,extrasCost,extraOptions,totalCost){
 	alert("Push data function");
 	var Airtable = require('airtable');
 	var base = new Airtable({
@@ -71,8 +82,20 @@ function pushData(){
 	}).base('appxt1ddAlNkHN4c7');
 	console.log("Creating a record....");
 	base('Cruise').create({
-		"First Name": firstNameInput,
-		"Last Name": lastNameInput
+		"First Name": firstname,
+		"Last Name": lastname,
+		"Phone Number": cellphone,
+		"Email": email,
+		"Drivers Licence": driversLicence,
+		"Age": age,
+		"Comments": comments,
+		"Date of Hire": checkInDate,
+		"Cruise Time": cruiseType,
+		"Hours on Cruise": cruiseDuration,
+		"Cruise Purpose": bookingPurpose,
+		"Amount of Guests": guestAmount,
+		"Extras": extraOptions,
+		"Total Cost": totalCost
 	}, {
 		typecast: true
 	}, function(err, record) {
@@ -87,5 +110,5 @@ function pushData(){
 var tiles = document.getElementsByClassName('card');
 for (var i = 0; i < tiles.length; i++) {
 	// If a tile is clicked, it calls the selectExercise function
-	tiles[i].addEventListener('click', charterBooking);
+	tiles[i].addEventListener('click', charterBooking,outPutSummary,checkDetails,pushData);
 }
