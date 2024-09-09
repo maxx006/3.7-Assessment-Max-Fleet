@@ -19,8 +19,8 @@
 	<br>
 	
    
-	<label for="cars">Plese select an option for how many hours you want the cruise to go for:</label>
-  <select name="cars" id="cruiseDuration">
+	<label for="hours">Plese select an option for how many hours you want the cruise to go for:</label>
+  <select name="hours" id="cruiseDuration">
     <option data-price="2040" value="3">3 Hours</option>
     <option data-price= "2720" value="4">4 Hours</option>
     <option data-price= "3400" value="5">5 Hours</option>
@@ -29,8 +29,8 @@
 	<br>
 
 	
-	<label for="cars">Plese select an option for your purpose of the booking:</label>
-  <select name="cars" id="bookingPurpose">
+	<label for="purpose">Plese select an option for your purpose of the booking:</label>
+  <select name="purpose" id="bookingPurpose">
     <option value="Hens/Stags Do">Hens/ Stags Do</option>
     <option value="Corporate Event">Corporate Event</option>
     <option value="Wedding">Wedding</option>
@@ -42,8 +42,8 @@
   </select>
 	<br>
 	
-	<label for="cars">Plese select an option for your Cruise sail time:</label>
-  <select name="cars" id="cruiseType">
+	<label for="sail_time">Plese select an option for your Cruise sail time:</label>
+  <select name="sail_time" id="cruiseType">
     <option value="11am Brunch Charter">11am Brunch Charter</option>
     <option value="3pm Afternoon Delight">3pm Afternoon Delight</option>
     <option value="7pm Sunset Sailing">7pm Sunset Sailing</option>
@@ -84,7 +84,7 @@
 	<label>Drivers Licence: <input autocomplete="family-name" id="driversLicenceInput" pattern="[A-Za-z\-']{2,10}" placeholder="EA230200" required="" title="Please enter in your Drivers Licence number" type="text"></label>
 	<div class="errorMessages" id="errorMessage5"></div>
 	
-	<label>Age: <input autocomplete="family-name" id="ageInput" pattern="[A-Za-z\-']{2,10}" placeholder="28" required="" title="Please enter in your Age" type="text"></label>
+	<label>Age (minimum age is 25): <input autocomplete="family-name" id="ageInput" pattern="[A-Za-z\-']{2,10}" placeholder="25" required="" title="Please enter in your Age (minimum age is 25)" type="text"></label>
 	<div class="errorMessages" id="errorMessage6"></div>
 	
 	<label>Comments: <input autocomplete="family-name" id="commentsInput" pattern="[A-Za-z\-']{2,10}" placeholder="comments" type="text"></label>
@@ -159,7 +159,11 @@
 		<input id="termsAndConditions" type="checkbox"> <button type="button" class="submitButton" onclick="checkDetails()">Submit Reservation</button>
 	</form>
 	
-	
+	<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
 	
 	
 <script src="ship.js"></script>
