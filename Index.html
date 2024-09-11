@@ -3,70 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
-<link href="boat.css" rel="stylesheet" type="text/css">
+<link href="boat.css" rel="stylesheet" type="text/css"> <!-- Link to external CSS stylesheet for styling -->
 </head>
 <body>
 	
 <div class="topnav">
 	<img alt="charters_logo" src="3.7 images/distinctive_chaters_white_logo.png"> <!-- Logo image for the website -->
-  <a class="active" href="#home">Booking</a>
+  <a class="active" href="#home">Booking</a> <!-- Navigation link to the booking section -->
 </div>
-	<div class="parallax_index"></div> <!-- parallax image at top of screen below nav bar -->
-<div class="main_content">	
+	
+<div class="parallax_index"></div> <!-- Parallax image at the top of the screen below the navigation bar -->
 
+<div class="main_content"> <!-- Main content container for the booking form and details -->
+
+	<!-- Date selection for cruise booking -->
 	<label>Please enter the date you would like to book for this cruise:</label>
 	<form>
 		<input autocomplete="on" id="checkInDate" placeholder="00/00/2024" required="" title="Enter your check in time" type="date">
 	</form>
 	<br>
 	
-   
-	<label for="hours">Plese select an option for how many hours you want the cruise to go for:</label>
-  <select name="hours" id="cruiseDuration">
-    <option data-price="2040" value="3">3 Hours</option>
-    <option data-price= "2720" value="4">4 Hours</option>
-    <option data-price= "3400" value="5">5 Hours</option>
-    <option data-price= "4080" value="6">6 Hours</option>
-  </select>
+	<!-- Dropdown for selecting cruise duration -->
+	<label for="hours">Please select an option for how many hours you want the cruise to go for:</label>
+	<select name="hours" id="cruiseDuration">
+		<option data-price="2040" value="3">3 Hours</option>
+		<option data-price="2720" value="4">4 Hours</option>
+		<option data-price="3400" value="5">5 Hours</option>
+		<option data-price="4080" value="6">6 Hours</option>
+	</select>
 	<br>
 
-	
-	<label for="purpose">Plese select an option for your purpose of the booking:</label>
-  <select name="purpose" id="bookingPurpose">
-    <option value="Hens/Stags Do">Hens/ Stags Do</option>
-    <option value="Corporate Event">Corporate Event</option>
-    <option value="Wedding">Wedding</option>
-    <option value="Birthday Celebration">Birthday Celebration</option>
-	 <option value="graduation">Graduation</option>
-	  <option value="Anniversary">Anniversary</option>
-	  <option value="Christmas Function">Christmas function</option>
-	  <option value="other">Other</option>
-  </select>
+	<!-- Dropdown for selecting the purpose of the booking -->
+	<label for="purpose">Please select an option for your purpose of the booking:</label>
+	<select name="purpose" id="bookingPurpose">
+		<option value="Hens/Stags Do">Hens/Stags Do</option>
+		<option value="Corporate Event">Corporate Event</option>
+		<option value="Wedding">Wedding</option>
+		<option value="Birthday Celebration">Birthday Celebration</option>
+		<option value="graduation">Graduation</option>
+		<option value="Anniversary">Anniversary</option>
+		<option value="Christmas Function">Christmas Function</option>
+		<option value="other">Other</option>
+	</select>
 	<br>
-	
 
-	
-	
+	<!-- Input field for the number of guests attending -->
 	<label>How many Guests Will be attending this event? (maximum 50)</label>
 	<form>
 		<input id="guestAmount" max="50" min="1" type="number">
+		<div class="errorMessages"></div>
 	</form>
 	
-	
+	<!-- Checkboxes for selecting additional extras -->
 	<form>
-	<p>What extras would you like to use?</p>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox1" name="checkbox1" value="Unlimited Drinks Package" data-price="2000">Unlimited Drinks Package<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox2" name="checkbox2" value="Catered Snacks" data-price="350">Catered Snacks<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox3" name="checkbox3" value="DJ" data-price="350">DJ<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox4" name="checkbox4" value="BYO Food" data-price="50">BYO Food $50 (Service Charge)<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox5" name="checkbox5" value="Cake" data-price="60">Cake<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox6" name="checkbox6" value="Overnight Experience" data-price="650">Overnight Experience (Up to 6 people can sleep on board)<br>
-	<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox7" value="Fairy Lights" data-price="30">Fairy Lights<br>
-	
+		<p>What extras would you like to use?</p>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox1" name="checkbox1" value="Unlimited Drinks Package" data-price="2000">Unlimited Drinks Package $2000<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox2" name="checkbox2" value="Catered Snacks" data-price="350">Catered Snacks $350<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox3" name="checkbox3" value="DJ" data-price="350">DJ $350<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox4" name="checkbox4" value="BYO Food" data-price="50">BYO Food $50 (Service Charge)<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox5" name="checkbox5" value="Cake" data-price="60">Cake $60<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox6" name="checkbox6" value="Overnight Experience" data-price="650">Overnight Experience (Up to 6 people can sleep on board) $650<br>
+		<input type="checkbox" class="extrasCheckbox" id="checkbox7" name="checkbox7" value="Fairy Lights" data-price="30">Fairy Lights $30<br>
 	</form>
-	
-	
-		
+
+	<!-- Cruise selection cards with images, details, and a booking button -->
 	<div class="row">
 		<div class="column">
 			<div class="card" data-price="680" data-value="Brunch Charter">
@@ -86,10 +86,9 @@
 				<p>$680 per Hour</p><button class="boatButton" type="button">Book Cruise</button>
 			</div>
 		</div>
-	</div><!-- this closes off my room cards-->
-	
+	</div><!-- End of cruise selection cards -->
 
-	
+	<!-- Form fields for user details and booking information -->
 	<label>First name: <input autocomplete="given-name" id="firstNameInput" pattern="[A-Za-z\-']{2,10}" placeholder="John" required="" title="Please enter in your first name" type="text"></label>
 	<div class="errorMessages" id="errorMessage1"></div>
 	
@@ -99,7 +98,7 @@
 	<label>Email: <input autocomplete="family-name" id="emailInput" pattern="[A-Za-z\-']{2,10}" placeholder="johnsmith@gmail.com" required="" title="Please enter in your Email" type="text"></label>
 	<div class="errorMessages" id="errorMessage3"></div>
 	
-	<label>Phone Number: <input autocomplete="given-name" id="phoneNumberInput" pattern="[A-Za-z\-']{2,10}" placeholder="0212032943" required="" title="Please enter in your Phone number" type="text"></label>
+	<label>Phone Number: <input autocomplete="given-name" id="phoneNumberInput" pattern="[A-Za-z\-']{2,10}" placeholder="0212032943" required="" title="Please enter in your Phone number" type="number"></label>
 	<div class="errorMessages" id="errorMessage4"></div>
 	
 	<label>Drivers Licence: <input autocomplete="family-name" id="driversLicenceInput" pattern="[A-Za-z\-']{2,10}" placeholder="EA230200" required="" title="Please enter in your Drivers Licence number" type="text"></label>
@@ -110,12 +109,12 @@
 	
 	<label>Comments: <input autocomplete="family-name" id="commentsInput" pattern="[A-Za-z\-']{2,10}" placeholder="comments" type="text"></label>
 	<div class="errorMessages" id="errorMessage7"></div>
-	
 
-	<h2>reservation Summary</h2>
+	<!-- Summary table displaying reservation details -->
+	<h2>Reservation Summary</h2>
 	<table>
-			<tbody>
-		    <tr>
+		<tbody>
+			<tr>
 				<td>Check in date</td>
 				<td id="outputDate"></td>
 			</tr>
@@ -149,33 +148,37 @@
 			</tr>
 		</tbody>
 	</table>
-<div id="outputcheckDetails"></div>
-<h3>do you agree to our terms and conditions?</h3>
+	<div id="outputcheckDetails"></div>
+	
+	<!-- Terms and conditions agreement section -->
+	<h3>Do you agree to our terms and conditions?</h3>
 	<form>
 		<!-- Checkbox for terms and conditions -->
-<label>
-  <input type="checkbox" id="termsCheckbox"> I agree to the terms and conditions
-	<div id="termsError"></div>
-</label>
+		<label>
+			<input type="checkbox" id="termsCheckbox"> I agree to the terms and conditions
+			<div id="termsError"></div>
+		</label>
 
-<!-- Submit button -->
-<button id="submitButton" class="submitButton">Submit Booking</button>
+		<!-- Submit button -->
+		<button id="submitButton" class="submitButton">Submit Booking</button>
 	</form>
 	
-	<!-- Modal content -->
-  <div id="myModal" class="modal">
-   <div class="modal-content">
-     <span class="close">&times;</span>
-     <p>Some text in the Modal..</p>
-   </div>
+	<!-- Modal content for booking confirmation -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Thank you for your reservation with Distinctive Charters</p>
+		</div>
+	</div>
+
+	<!-- JavaScript files for interactivity -->
+	<script src="ship.js"></script>
+	<script src="airtable.browser.js"></script>
 </div>
 
-	
-<script src="ship.js"></script>
-<script src="airtable.browser.js"></script>
-</div>
-	<footer> <!--This is my secondary hyperlinks -->
-		<p>Site developed and maintained by Max Fleet 2024</p>
-	</footer>
+<!-- Footer section -->
+<footer> 
+	<p>Site developed and maintained by Max Fleet 2024</p>
+</footer>
 </body>
 </html>
