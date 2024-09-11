@@ -1,415 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-footer {
-    background-color: #2C2B2F;
-    font-size: 26px;
-    padding: 7%;
-    color: white;
-    font-family: 'Barlow', sans-serif; /* Imported from Google Fonts */
-}
-
-/* Define styles for left-aligned anchor in the footer */
-footer .left_anchor {
-    margin-left: 3%; /* Align with main content */
-}
-
-/* Define styles for right-aligned elements in the footer */
-footer .right {
-    margin-right: 3%; /* Align with main content */
-}
-
-/* Define styles for image links in the footer */
-footer img {
-    float: right;
-    height: 50px;
-    padding: 10px 10px;
-}
-
-/* Define styles for links in the footer */
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Define styles for paragraphs in the footer */
-footer p {
-    font-size: 18px;
-    margin-left: 3%;
-    text-align: center;
-}
-
-/* Define styles for the footer height and alignment */
-footer {
-    height: 150px;
-    text-align: center;
-}
-
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-  
-}
-
-.container { /*this is what the main content is in, set to scale */
-	width: 80%;
-	margin: auto;
-	font-family: 'Roboto', sans-serif;
-}
-
-
-body{
-    width:80%;
-    margin:auto;
-}
-
-.card img{
-	width: 90%;
-}
-
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-
-
-table{
-    border: 1px solid #ddd;
-      padding: 8px;
-width:60%;
-    margin:auto;
-
-}
-
-h1,h2,h3{
-	text-align: center;
-}
-
-
-.roomButton,.submitButton{
-	width: 100%;
-	height: 30px;
-	border-radius: 5px;
-	background-color: skyblue;
-}
-
-#termsAndConditions{
-	height: 20px;
-	width: 25px;
-}
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-  
-}
-
-.container { /*this is what the main content is in, set to scale */
-	width: 80%;
-	margin: auto;
-	font-family: 'Roboto', sans-serif;
-}
-
-
-input:invalid {
-  background-color: ivory;
-  border: none;
-  outline: 2px solid red;
-  border-radius: 5px;
-}
-
-input:valid {
-  background-color: ivory;
-  border: none;
-  outline: 2px solid green;
-  border-radius: 5px;
-}
-.errorMessages{
-    text-align: right;
-    color: red;
-    float: right;
-    font-style: italic;
-}  
-
-
-h1,h2{
-	color:darkBlue;
-}
-
-/* displays the tickets as light blue buttons */
-.ticket-tile {
-	padding: 10px 20px;
-	margin:10px;
-	outline: none;
-	background-color: darkblue;
-	color: white;
-	font-family: 'Roboto', sans-serif;
-	border: none;
-	display: inline-block;
-	border-radius: 5px;
-	
-}
-table{
-	width:80%;
-	margin:auto;
-	
-}
-.button_submit {
-	border-radius: 4px;
-	background-color: #50EE89;
-	border: none;
-	padding: 20px;
-	width: 200px;
-	transition: all 0.5s;
-}
-
-.button_reset {
-	float:right;
-	border-radius: 4px;
-	background-color: #d35400;
-	border: none;
-	color:white;
-	padding: 20px;
-	width: 200px;
-	transition: all 0.5s;
-}
-
-[type='text'], select, [type='email'], [type='number'] {
-	display: block;
-	background: transparent;
-	vertical-align: middle;
-	width: 100%;
-	border: 1px solid #cdcdcd;
-	border-radius: 4px;
-	font-size: 0.95rem;
-}
-
-label {
-	font-weight: 800;
-	font-size: 0.9rem;
-	display: block;
-	margin: 0.5rem 0;
-}
-
-
-
-body{
-    width:60%;
-    margin:auto;
-}
-
-input[type=text],[type=number],[type=tel],[type=date],[type=email] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-div {
-  border-radius: 5px;
-  background-color: lightgray;
-  padding: 20px;
-}
-
-#submitButton{
-	color: white;
-    text-transform: uppercase;
-	text-decoration: none;
-	background: #ed3330;
-	padding:20px;
-	border-radius: 5px;
-	display: inline-block;
-	border: none;
-	transition: all 0.4s ease 0s;
-}
-
-textarea {
-width: 100%; height: 150px;
-padding: 12px 20px; box-sizing: border-box; border: 2px solid #ccc; border-radius: 4px;
-background-color: #ffffff; resize: none;
-}
-
-@keyframes click-wave {
-  0% {
-    height: 40px;
-    width: 40px;
-    opacity: 0.35;
-    position: relative;
-  }
-  100% {
-    height: 200px;
-    width: 200px;
-    margin-left: -80px;
-    margin-top: -80px;
-    opacity: 0;
-  }
-}
-
-.option-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  position: relative;
-  top: 13.33333px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  transition: all 0.15s ease-out 0s;
-  background: #cbd1d8;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 0.5rem;
-  outline: none;
-  z-index: 1000;
-}
-.option-input:hover {
-  background: #9faab7;
-}
-.option-input:checked {
-  background: #40e0d0;
-}
-.option-input:checked::before {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  content: '✔';
-  display: inline-block;
-  font-size: 26.66667px;
-  text-align: center;
-  line-height: 40px;
-}
-.option-input:checked::after {
-  -webkit-animation: click-wave 0.65s;
-  -moz-animation: click-wave 0.65s;
-  animation: click-wave 0.65s;
-  background: #40e0d0;
-  content: '';
-  display: block;
-  position: relative;
-  z-index: 100;
-}
-
-input:invalid{
-	background-color: pink;
-}
-
-.errorMessages{
-	text-align: right;
-	color: red;
-	float: right;
-	font-style: italic;
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-
-
-.card img{
-	width: 90%;
-}
-
 .main_content {
     width: 80%; /* 80% width of viewport */
     font-family: "roboto", sans-serif;
@@ -423,3 +14,288 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-radius: 5px;
 }
 
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #2C2B2F;
+    font-size: 26px;
+    padding: 7%;
+    color: white;
+    font-family: 'Barlow', sans-serif; /* Imported from Google Fonts */
+    text-align: center;
+    height: 100px;  /* Specify height to avoid overlap */
+	width: 1000px;
+}
+
+footer img {
+    float: right;
+    height: 50px;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 3%;
+}
+
+/* General Layout Styles */
+body {
+    margin: 0 auto;
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive and Column Layout */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Card Component */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.card img {
+    width: 100%;
+	height: 100%;
+}
+
+
+.card hover{
+	
+}
+
+/* Navigation Styles */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Form and Input Styles */
+[type='text'], [type='number'], [type='tel'], [type='date'], [type='email'], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:invalid {
+    background-color: ivory;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
+input:valid {
+    background-color: ivory;
+    outline: 2px solid green;
+    border-radius: 5px;
+}
+
+/* Form Error Messages */
+.errorMessages {
+    text-align: right;
+    color: red;
+    float: right;
+    font-style: italic;
+}
+
+/* Form Buttons */
+.roomButton, .submitButton {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: skyblue;
+}
+
+#submitButton {
+    color: white;
+    text-transform: uppercase;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+/* Table Styles */
+table {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 60%;
+    margin: auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    color: darkBlue;
+}
+
+/* General Styling */
+div {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Additional Input Styling */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    resize: none;
+}
+
+/* Option Input Styling */
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+}
+
+.option-input:hover {
+    background: #9faab7;
+}
+
+.option-input:checked {
+    background: #40e0d0;
+}
+
+.option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.option-input:checked::after {
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+}
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}

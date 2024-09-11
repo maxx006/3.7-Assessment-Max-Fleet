@@ -1,4 +1,11 @@
 // JavaScript Document
+var modal = document.getElementById("myModal");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var btn = document.getElementById("myBtn");
+// JavaScript Document
+
+
 function charterBooking() {
 	var totalCost = 0;
 	var extrasCost = 0;
@@ -11,13 +18,16 @@ function charterBooking() {
 	totalCost += Number(cruiseDuration * pricePerHour + extrasCost);
 	extraOptions = [];
 	var myForm = document.getElementsByClassName("extrasCheckbox")
+	
 	if (document.getElementById("checkInDate").validity.valueMissing) {
 		alert("date not selected");
 		document.getElementById("checkInDate").scrollIntoView();
 		//add an inline error message here 
 		return;
 	}
-	if (document.getElementById("cruiseDuration").validity.rangeUnderflow || document.getElementById("cruiseDuration").validity.rangeOverflow || document.getElementById("cruiseDuration").validity.valueMissing) {
+	if (document.getElementById("cruiseDuration").validity.rangeUnderflow || 
+		document.getElementById("cruiseDuration").validity.rangeOverflow || 
+		document.getElementById("cruiseDuration").validity.valueMissing) {
 		alert("Select duration of cruise");
 		document.getElementById("cruiseDuration").scrollIntoView();
 		//add 
@@ -51,7 +61,7 @@ function outPutSummary(checkInDate, cruiseDuration, guestAmount, cruiseType, ext
 	checkDetails(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions);
 }
 
-function checkDetails(checkInDate, cruiseDuration, cruiseType, bookingPurpose, guestAmount, extrasCost, extraOptions, totalCost) {
+function checkDetails(checkInDate, cruiseDuration, guestAmount, cruiseType, extrasCost, totalCost, bookingPurpose, extraOptions) {
 	alert("customer details function");
 	var firstname = firstNameInput.value;
 	var lastname = lastNameInput.value;
@@ -60,7 +70,6 @@ function checkDetails(checkInDate, cruiseDuration, cruiseType, bookingPurpose, g
 	var driversLicence = driversLicenceInput.value;
 	var age = ageInput.value;
 	var comments = commentsInput.value;
-	outputcheckDetails.innerHTML = firstname + " " + lastname + " " + cellphone + " " + email + " " + driversLicence + " " + age + " " + comments;
 	pushData(firstname, lastname, cellphone, email, driversLicence, age, comments, checkInDate, cruiseDuration, cruiseType, bookingPurpose, guestAmount, extrasCost, extraOptions, totalCost);
 }
 
@@ -79,13 +88,13 @@ function pushData(firstname, lastname, cellphone, email, driversLicence, age, co
 		"Drivers Licence": driversLicence,
 		"Age": age,
 		"Comments": comments,
-		"Date of Hire": checkInDate,
-		"Cruise Time": cruiseType,
-		"Hours on Cruise": cruiseDuration,
-		"Cruise Purpose": bookingPurpose,
-		"Amount of Guests": guestAmount,
-		"Extras": extraOptions,
-		"Total Cost": totalCost
+		"Date of Hire": document.getElementById("checkInDate").value,
+		"Cruise Time": document.getElementById("cruiseType").value,
+		"Hours on Cruise": document.getElementById("cruiseDuration").value,
+		"Cruise Purpose": document.getElementById("bookingPurpose").value,
+		"Amount of Guests": document.getElementById("guestAmount").value,
+		"Extras": document.getElementById("extraOptions").value,
+	    "Total Cost": document.getElementById("totalCost").value
 	}, {
 		typecast: true
 	}, function(err, record) {
@@ -115,9 +124,25 @@ function pushData(firstname, lastname, cellphone, email, driversLicence, age, co
     console.log("End Function.");
 }
 
+var today = new Date();
+
+var dd = today.getDate();
+
+var mm = today.getMonth() + 1; //January is 0!
+
+var yyyy = today.getFullYear();
+if (dd < 10) {
+	dd = '0' + dd
+}
+if (mm < 10) {
+	mm = '0' + mm
+}
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("checkInDate").setAttribute("min", today);
+
 // Add event listeners to exercise to room card by using a for loop
 var tiles = document.getElementsByClassName('card');
 for (var i = 0; i < tiles.length; i++) {
 	// If a tile is clicked, it calls the outputSummary function
-	tiles[i].addEventListener('click', charterBooking, outPutSummary);
+	tiles[i].addEventListener('click', outPutSummary);
 }
